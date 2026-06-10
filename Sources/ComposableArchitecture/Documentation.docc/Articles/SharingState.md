@@ -868,7 +868,7 @@ like this:
 
 ```swift
 extension URL {
-  static let users = URL(/* ... */))
+  static let users = URL(/* ... */)
 }
 
 @Shared(.fileStorage(.users)) var users: [User] = []
