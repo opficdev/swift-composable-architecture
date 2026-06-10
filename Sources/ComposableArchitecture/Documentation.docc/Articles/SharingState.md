@@ -187,7 +187,7 @@ It works similarly to the in-memory sharing discussed above, but it requires a U
 on disk, as well as a default value that will be used when there is no data in the file system:
 
 ```swift
-@Shared(.fileStorage(URL(/* ... */)) var users: [User] = []
+@Shared(.fileStorage(URL(/* ... */))) var users: [User] = []
 ```
 
 This strategy works by serializing your value to JSON to save to disk, and then deserializing JSON
