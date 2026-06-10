@@ -1101,7 +1101,7 @@ await store.send(.tap)
 
 // ❌ Expected state to change, but no change occurred.
 await store.receive(.response) {
-  $0.$shared.withLock { $0 = true }
+  $0.$bool.withLock { $0 = true }
 }
 ```
 
@@ -1111,7 +1111,7 @@ must always assert against shared state mutations in the first action:
 
 ```swift
 await store.send(.tap) {  // ✅
-  $0.$shared.withLock { $0 = true }
+  $0.$bool.withLock { $0 = true }
 }
 
 // ❌ Expected state to change, but no change occurred.
