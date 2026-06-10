@@ -653,7 +653,7 @@ section above to use app storage:
 struct State: Equatable {
   @Shared(.appStorage("count")) var count: Int
 }
-````
+```
 
 …then the test for this feature can be written in the same way as before and will still pass.
 
